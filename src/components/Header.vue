@@ -1,48 +1,51 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <header>
-      <!-- <img
-        alt="Vue logo"
-        class="logo"
-        src="@/assets/logo.svg"
-        width="125"
-        height="125"
-      /> -->
-      <div class="wrapper">
-        <nav>
-            <Link>Fulfilling orders</Link>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li><a href="#news">Page1</a></li>
+        <li><a href="#contact">Page2</a></li>
+        <li style="float: right">
+          <RouterLink to="/about" class="active">About</RouterLink>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
+header {
+  height: 45px;
+  display: block;
+  background-color: #fff;
+  border-bottom: 1px solid #d2d2d2;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 10px;
+  overflow: hidden;
+}
+li {
+  display: inline;
+  float: left;
 }
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
+li a {
+  padding: 8px;
+  display: block;
+  color: black;
   text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+li a:hover {
+  background-color: #d1d1d1;
+}
+li a.active {
+  background-color: #d1d1d1;
 }
 </style>

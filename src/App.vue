@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
 </script>
 
 <template>
   <AppProvider>
-    <Header msg="sss" ></Header>
+    <Header />
     <RouterView />
-    <FooterHelp>Footer help content</FooterHelp>
+    <FooterHelp>Copy Right is here</FooterHelp>
   </AppProvider>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
