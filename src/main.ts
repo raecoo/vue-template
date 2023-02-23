@@ -5,7 +5,8 @@ import App from "./App.vue";
 import router from "./router";
 
 import { createApp as createAppBridge } from "@shopify/app-bridge";
-// import { getSessionToken } from "@shopify/app-bridge-utils";
+import { getSessionToken } from "@shopify/app-bridge-utils";
+
 
 
 import "./assets/main.css";
@@ -22,6 +23,8 @@ const appBridge = createAppBridge({
 
 app.config.globalProperties.$appBridge = appBridge;
 
+const sessionToken = getSessionToken(appBridge);
+console.log(sessionToken);
 app.use(createPinia());
 app.use(router);
 
